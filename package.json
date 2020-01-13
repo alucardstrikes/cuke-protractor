@@ -1,0 +1,29 @@
+{
+  "name": "cucke-protractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "cuke-test": "cucumber-js -r typescript/features -f json:reports/json/cuke_report.json",
+    "webdriver-update": "cd ./node_modules/protractor && npm i webdriver-manager@latest && node bin/webdriver-manager update --ignore_ssl",
+    "webdriver-start": "webdriver-manager start",
+    "test": "protractor typeScript/config/config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "protractor": "^5.4.2",
+    "protractor-cucumber-framework": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/cucumber": "^6.0.0",
+    "typescript": "2.5.2",
+    "@types/node": "^8.0.29"
+  }
+}
